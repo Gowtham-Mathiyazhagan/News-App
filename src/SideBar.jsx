@@ -28,7 +28,7 @@ function SideBar({
         <h3 className="filter">Filter: <i className="bi bi-x-square"  onClick={()=>setActive(false)} ></i></h3>
       <div className="inputQuery"> 
           <label htmlFor="query">Search Fav:</label>
-          <input type="text" id="query" ref={favquery} />
+          <input type="text" id="query" ref={favquery} autoComplete="off" />
           <button
             className="btn-icon"
             onClick={() => onClick({ queryVal: favqueryVal, active: null })}

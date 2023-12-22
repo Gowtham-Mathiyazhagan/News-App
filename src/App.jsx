@@ -36,7 +36,6 @@ function App() {
   let isoFormattedDate = yestarday.toISOString().split("T")[0];
   //date
   const [date, setDate] = useState(isoFormattedDate);
-  console.log(date)
   //loading
   const [loading, setLoading] = useState(true);
 
