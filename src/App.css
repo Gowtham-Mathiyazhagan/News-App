@@ -25,19 +25,18 @@ body {
   grid-template-rows: 8em 8em 1fr 7em 0.2em;
 }
 .title {
-  padding-top: 0.5em;
-  height: 100px;
+  padding-top: 0.2em;
+  height: 80px;
   width: 100%;
   text-align: center;
   background-color: #fff;
   color: #000000;
   grid-area: head;
-  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
-    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; */
+  z-index: 3;
 }
 .title > h2 {
   font-weight: 900;
-  font-size: 2.5em;
+  font-size: 2.3em;
   text-transform: capitalize;
 }
 .title span {
@@ -47,18 +46,25 @@ body {
   -webkit-text-stroke: #ff0000 0.2px;
 }
 .title > p {
-  font-size: 0.7em;
+  font-size: 0.8em;
 }
 .container-sidebar {
-  min-height: 700px;
+  /* min-height: 700px; */
+  height: 100vh;
   display: grid;
   grid-auto-flow: row;
   align-content: flex-start;
   grid-area: sidebar;
   background-color: #fcfcfc;
-  margin-top: -26px;
+  margin-top: -56px;
+  padding-top: 86px;
   font-size: 0.9em;
+  position: fixed;
+  top:9%;
+  left:0  
 }
+
+
 .container-sidebar #query,
 #pageSize {
   display: block;
@@ -206,6 +212,8 @@ select {
   left: 50%;
   transform: translate(-50%, -50%);
   transition: transform 0.5s ease-in-out;
+  overflow: hidden;
+
 }
 .article-card:hover .article-img img {
   transform: translate(-50%, -50%) scale(1.1);
@@ -400,6 +408,9 @@ a {
   .container-sidebar h3 > i {
     display: none;
   }
+.container-sidebar {
+left: 0 !important;
+}
 }
 @media only screen and (max-width: 1170px) {
   html {
@@ -416,14 +427,11 @@ a {
       "button button button"
       "footer footer footer";
   }
-  .container-sidebar {
-    position: absolute;
-    top: 9.5em;
-    left: -50%;
+.container-sidebar {
     transition: left 0.8s;
     z-index: 2;
-    height: 100vh;
   }
+  
   .loader {
     position: absolute;
     top: 55%;
@@ -466,6 +474,7 @@ a {
     font-size: 1em;
     margin: -4em 0 0 1em;
   }
+
 }
 @media only screen and (max-width: 600px) {
   html {
@@ -491,10 +500,19 @@ a {
     width: 25em;
     grid-row-gap: 0.2em;
   }
+  .container-sidebar {
+    height: 120vh;
+    margin-top: -120px;
+    padding-top: 150px;
+  
+  }
 }
 @media only screen and (max-width: 376px) {
   html {
     font-size: 11px;
+  }
+  .container-sidebar {
+    height: 150vh;
   }
   .container-header {
     margin-top: 10px;

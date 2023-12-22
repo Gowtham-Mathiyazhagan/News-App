@@ -47,7 +47,7 @@ function App() {
     }, 1000);
     async function fetchData() {
       let convert = await fetch(
-         `https://newsapi.org/v2/everything?q=${query.queryVal}&from=${date}&to=${date}&sortBy=${sort}&language=${language}&page=${page}&pageSize=${pageSize}&apiKey=9fb1101e44974897a2becf24e588d7d6`
+       `https://newsapi.org/v2/everything?q=${query.queryVal}&from=${date}&to=${date}&sortBy=${sort}&language=${language}&page=${page}&pageSize=${pageSize}&apiKey=9fb1101e44974897a2becf24e588d7d6`
       );
       let data = await convert.json();
       setVal(data.articles ? data.articles : null);

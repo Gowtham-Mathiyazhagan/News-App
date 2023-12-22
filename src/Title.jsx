@@ -5,8 +5,7 @@ function Title() {
         the <span>gowtham</span> express
       </h2>
       <p>
-        When you know what is happening, you can make better choices about
-        things.
+      &quot;Empowering Minds, One Headline at a Time.&quot;     
       </p>
     </div>
   );
