@@ -27,7 +27,7 @@ body {
 .title {
   padding-top: 0.2em;
   height: 80px;
-  width: 100%;
+  min-width: 100px;
   text-align: center;
   background-color: #fff;
   color: #000000;
@@ -58,6 +58,7 @@ body {
   background-color: #fcfcfc;
   margin-top: -56px;
   padding-top: 86px;
+  /* padding-top: 76px; */
   font-size: 0.9em;
   position: fixed;
   top:9%;
@@ -68,11 +69,13 @@ body {
 .container-sidebar #query,
 #pageSize {
   display: block;
-  height: 2.5em;
+  /* height: 2.5em; */
+  height: 2em;
   width: 98%;
   padding-left: 0.5em;
   outline: none;
-  border-radius: 0.8em;
+  /* border-radius: 0.8em; */
+  border-radius: 0.6em;
   border: solid 1px #000000;
 }
 .container-sidebar :is(#query, #pageSize):focus {
@@ -81,6 +84,7 @@ body {
 .inputQuery {
   display: grid;
   height: 8em;
+  /* height: 7em; */
   grid-auto-flow: row;
   justify-items: center;
   grid-row-gap: 0.5em;
@@ -88,9 +92,10 @@ body {
     rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 .inputQuery .btn-icon {
-  height: 2.5em;
+  /* height: 2.5em; */
+  height: 2em;
   width: 50%;
-  border-radius: 0.8em;
+  border-radius: 0.6em;
   border: solid 1px black;
   background: #fcfcfc;
 }
@@ -102,9 +107,12 @@ body {
   transform: scale(1.1);
   border: solid 1px #ff0000;
 }
+
 :is(.language, .sortBy, .pageSize, .date) {
   padding-top: 0.5em;
-  height: 6em;
+  padding: 0.5em 0 0.5em 0;
+  /* height: 6em; */
+  height: 5em;
   display: grid;
   grid-auto-flow: row;
   justify-items: center;
@@ -113,11 +121,13 @@ body {
     rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 :is(#lan, #sort, ) {
-  height: 2.5em;
+  /* height: 2.5em; */
+  height: 2em;
   width: 98%;
   outline: none;
   padding-left: 0.5em;
-  border-radius: 0.8em;
+  border-radius: 0.6em;
+
 }
 :is(#lan, #sort, .DateVal):focus {
   border: solid 1px rgb(254, 15, 15);
@@ -128,16 +138,18 @@ body {
   padding-bottom: 1.5em;
 }
 .DateVal {
-  height: 2.5em;
+  /* height: 2.5em; */
+  height: 2em;
   width: 200px;
   outline: none;
   padding-left: 0.5em;
-  border-radius: 0.8em;
+  border-radius: 0.6em;
   border: solid 1px black;
 }
 select {
   display: block;
   width: 100%;
+  border: solid 1px black;
 }
 .filter {
   font-size: 1.5em;

@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import { useRef,useState } from "react";
 function SideBar({
+  query,
   onClick,
   onLanguage,
   language,
@@ -28,7 +29,7 @@ function SideBar({
         <h3 className="filter">Filter: <i className="bi bi-x-square"  onClick={()=>setActive(false)} ></i></h3>
       <div className="inputQuery"> 
           <label htmlFor="query">Search Fav:</label>
-          <input type="text" id="query" ref={favquery} autoComplete="off" />
+          <input type="text" id="query" ref={favquery} autoComplete="off" placeholder={query} />
           <button
             className="btn-icon"
             onClick={() => onClick({ queryVal: favqueryVal, active: null })}
@@ -82,6 +83,7 @@ function SideBar({
 }
 //Determine props type
 SideBar.propTypes = {
+  query : PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
   // active: PropTypes.object.isRequired,
   onLanguage: PropTypes.func.isRequired,

@@ -46,7 +46,7 @@ function App() {
     }, 1000);
     async function fetchData() {
       let convert = await fetch(
-       `https://newsapi.org/v2/everything?q=${query.queryVal}&from=${date}&to=${date}&sortBy=${sort}&language=${language}&page=${page}&pageSize=${pageSize}&apiKey=9fb1101e44974897a2becf24e588d7d6`
+       `https://newsapi.org/v2/everything?q=${query.queryVal}&from=${date}&to=${date}&sortBy=${sort}&language=${language}&page=${page}&pageSize=${pageSize}&apiKey=8c57e34ca23e4dd5911ffc7c338bd1c4`
       );
       let data = await convert.json();
       setVal(data.articles ? data.articles : null);
@@ -63,6 +63,7 @@ function App() {
           active={query.active}
         />
         <SideBar
+        query={query.queryVal}
           onClick={(headVal) => setquery(headVal)}
           onLanguage={(e) => setLanguage(e.target.value)}
           language={language}
